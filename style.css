@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+html {
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: #2a7c6f;
+}
+a {
+    color: #2a7c6f;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #4ac2af;
+}
+#header ul,
+#footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+#header {
+    margin: 0;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edece5;
+    position: sticky;
+    top: 0;
+}
+#logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#logo a, #logo a:hover {
+    color: #181818;
+    text-decoration: none;
+}
+#navimenu {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+#navimenu a, #navimenu a:hover {
+    color: #2a7c6f;
+}
+
+#container {
+    padding: 2rem auto;
+}
+
+/* hero */
+#hero h1 {
+    font-size: 3rem;
+}
+
+/* top sellers */
+#topsellers {
+    padding: 2rem auto;
+}
+#topsellerslist {
+    padding: 1rem 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0;
+}
+
+/* menu */
+#menu {
+    background-color: #edece5;
+    margin: 2rem 0 2rem;
+    padding: 1rem 8rem;
+}
+#menulist {
+    padding: 1rem 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+.menucategory {
+    text-align: center;
+}
+
+/* about us */
+#aboutus {
+    margin: 2rem;
+    padding: 1rem 8rem;
+    text-align: center;
+}
+.openinghours {
+    margin: 0.2rem auto;
+}
+.openinghours th {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 300;
+}
+.openinghours td {
+    text-align: left;
+    padding: 0.4rem 1.4rem;
+}
+#address {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+.address {
+    text-decoration: underline;
+    margin-top: 3rem;
+}
+#map {
+    margin: 1rem;
+}
+
+/* contact */
+#contact {
+    margin: 2rem 0 0 0;
+    padding: 1rem 8rem 2rem;
+    background-color: #edece5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+#contact input, 
+#contact textarea {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: block;
+    margin-bottom: 0.6rem;
+    border: 0;
+    border-bottom: 1px solid #181818;
+}
+#contact input {
+    width: 630px;
+    min-height: 30px;
+}
+#contact textarea {
+    margin: 0.4rem auto 1.4rem auto;
+    padding: 0.2rem;
+    width: 630px;
+}
+#submit {
+    background-color: #2a7c6f;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    padding: 0.8rem 1.6rem;
+    border: 0;
+}
+#submit:hover {
+    background-color: #4ac2af;
+}
+
+/* FAQ */
+#faq {
+    margin: 0;
+    padding: 1rem 16rem 3rem;
+    background-color: #4ac2af;
+    color: #ffffff;
+}
+#faq h2, #faq h3 {
+    color: #ffffff;
+}
+.accordion {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.2rem;
+    background-color: #4ac2af;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1.2rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: #edece5;
+    color: #181818;
+}
+.accordion:after {
+    content: '\002B';
+    color: #ffffff;
+    font-weight: bold;
+    float: right;
+    margin-left: 0.5rem;
+}
+.active::after {
+    content: "\2212";
+}
+.active::after:hover {
+    color: #181818;
+}
+.panel {
+    padding: 0 1.2rem;
+    text-align: left;
+    background-color: #edece5;
+    color: #181818;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* footer */
+#footer {
+    margin: 2rem auto;
+    padding: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sociallinks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.sociallink {
+    font-size: 2rem;
+}
+.sociallink a:hover {
+    color: #4ac2af;
+}

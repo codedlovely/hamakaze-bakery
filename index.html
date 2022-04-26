@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamakaze Bakery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
+    <script src="https://kit.fontawesome.com/25514ad6fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo"><a href="./index.html">HAMAKAZE BAKERY</a></div>
+        <ul id="navimenu">
+            <li class="navilink"><a href="./index.html">HOME</a></li>
+            <li class="navilink"><a href="#topsellers">TOP SELLERS</a></li>
+            <li class="navilink"><a href="#menu">MENU</a></li>
+            <li class="navilink"><a href="#aboutus">ABOUT US</a></li>
+            <li class="navilink"><a href="#contact">CONTACT</a></li>
+            <li class="navilink"><a href="#faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="hero">
+            <h1>We are Hamakaze Bakery</h1>
+            <div id="heroslider">
+                <!---->
+            </div>
+        </div>
+
+        <div id="topsellers">
+            <h2>Our Top Sellers</h2>
+            <div id="topsellerslist">
+                <div class="topseller">
+                    <img src="" alt="">
+                    <p>Blueberry muffin</p>
+                </div>
+                <div class="topseller">
+                    <img src="" alt="">
+                    <p>Double chocolate cake</p>
+                </div>
+                <div class="topseller">
+                    <img src="" alt="">
+                    <p>Sugar cookies</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h2>Menu</h2>
+            <div id="menulist">
+                <div class="menucategory">
+                    <h3>Cakes</h3>
+                    <ul>
+                        <li>Birthday Cake</li>
+                        <li>Wedding Cake</li>
+                        <li>Coffee Cake</li>
+                        <li>Olive oil Cake</li>
+                        <li>Fruits Cake</li>
+                    </ul>
+                </div>
+                <div class="menucategory">
+                    <h3>Pastries</h3>
+                    <ul>
+                        <li>Apple denish</li>
+                        <li>Creamcheese denish</li>
+                        <li>Sweetpotato pie</li>
+                    </ul>
+                </div>
+                <div class="menucategory">
+                    <h3>Baked goods</h3>
+                    <ul>
+                        <li>Donuts</li>
+                        <li>Cookies</li>
+                        <li>Chocolate</li>
+                        <li>Brownies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="aboutus">
+            <h2>About us</h2>
+            <!--opening hour-->
+            <table class="openinghours">
+                <tr>
+                    <th colspan="2">Opening hours</th>
+                </tr>
+                <tr>
+                    <td>Monday - Friday</td>
+                    <td>8:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>9:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+            <!--address and map-->
+            <div id="address">
+                <div>
+                    <p class="address">Address</p>
+                    <p>1-1 Hamakaze street<br>Coast City 1234567</p>
+                    <p><i class="fa-solid fa-square-phone" title="phone number"></i> 123-456-7890</p>
+                </div>
+                <!--map-->
+                <div>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8768717350767!2d-122.38904798524374!3d37.76948517976039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fc44dcbc04d%3A0x5e94ed7d27997b11!2s550%20Terry%20A%20Francois%20Blvd%2C%20San%20Francisco%2C%20CA%2094158!5e0!3m2!1sen!2sus!4v1650964751070!5m2!1sen!2sus" width="400" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!--contact form-->
+        <div id="contact">
+            <h2>Contact us</h2>
+            <form action="action.php">
+                <label for="yourname">Your name *</label>
+                <input type="text" name="yourname" id="yourname" placeholder="Your name" required>
+                <label for="youremail">Your email *</label>
+                <input type="text" name="youremail" id="youremail" placeholder="Your email" required>
+                <label for="subject">Subject *</label>
+                <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" placeholder="Message" cols="45" rows="10" required></textarea>
+                <input type="submit" id="submit" value="Send message">
+            </form>
+        </div>
+
+        <div id="faq">
+            <h2>Questions and Answers</h2>
+            <button class="accordion">
+                How far in advance do I need to place my order?
+            </button>
+            <div class="panel">
+                We highly recommend placing orders at least 3 - 4 weeks in advance
+                for any special order as our schedule does book up.
+                We do not guarantee availability until an order has been confirmed.
+            </div>
+            <button class="accordion">
+                Do you sell vegan cakes?
+            </button>
+            <div class="panel">
+                Yes, we have variety of vegan cakes and baked goods.
+                Please contact us if you have specific requests for ingredients.
+            </div>
+            <button class="accordion">
+                How long does a cake stay fresh?
+            </button>
+            <div class="panel">
+                As a general rule, our cakes stay fresh at room temperature up to one week.
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div id="copyright">
+            &copy; 2022 Hamakaze Bakery
+        </div>
+        <ul id="sociallinks">
+            <li class="sociallink"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="sociallink"><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+            <li class="sociallink"><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
