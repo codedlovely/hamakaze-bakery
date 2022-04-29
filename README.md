@@ -14,4 +14,5 @@ A landing page for a fictional local bakery.
 
 ### JavaScript references
 [webdev.tech](https://web-dev.tech/front-end/javascript/accordion/)
+
 [w3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
