@@ -69,11 +69,9 @@ a:hover {
         font-size: 1.8rem;
     }
     #navimenu {
-        justify-content: space-between;
+        justify-content: left;
+        align-items: center;
         gap: 1.6rem;
-    }
-    .navilink {
-        padding-bottom: 1rem;
     }
 }
 
@@ -517,8 +515,6 @@ a:hover {
         flex-direction: column;
         background-color: #ffffffef;
         width: 100%;
-        border-radius: 0 0 1rem 1rem;
-        text-align: center;
         box-shadow: 0 0 6px #4ac2af;
     }
     .nav-menu {
