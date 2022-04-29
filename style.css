@@ -43,6 +43,7 @@ a:hover {
     border-bottom: 1px solid #edece5;
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 #logo {
     font-size: 1.4rem;
@@ -62,6 +63,18 @@ a:hover {
 }
 #navimenu a, #navimenu a:hover {
     color: #2a7c6f;
+}
+@media (max-width: 800px) {
+    #logo {
+        font-size: 1.8rem;
+    }
+    #navimenu {
+        justify-content: space-between;
+        gap: 1.6rem;
+    }
+    .navilink {
+        padding-bottom: 1rem;
+    }
 }
 
 #container {
@@ -91,6 +104,17 @@ a:hover {
     margin: 1rem 0;
     text-shadow: 1px 1px 6px #edece5;
 }
+@media (max-width: 800px) {
+    #parabgheader h1 {
+        font-size: 3rem;
+        margin: 0 auto;
+        padding: auto;
+    }
+    #parabgheader p {
+        font-size: 1.8rem;
+        margin: 1rem;
+    }
+}
 
 /* top sellers */
 #topsellers {
@@ -110,12 +134,12 @@ a:hover {
 .topseller img {
     width: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #topsellerslist {
-        padding: 1rem;
+        padding: 1rem 0.4rem;
     }
-    .topseller {
-        max-width: 100%;
+    .topseller p {
+        margin: 0.3rem auto 1.6rem;
     }
 }
 
@@ -167,6 +191,27 @@ a:hover {
     font-size: 0.9rem;
     line-height: 1.2rem;
 }
+@media (max-width: 800px) {
+    #menu {
+        padding: 2rem;
+    }
+    #menulist {
+        padding: 1rem;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.4rem;
+        flex-wrap: wrap;
+    }
+    .menucategory {
+        min-width: 100%;
+        text-align: center;
+        line-height: 1.8rem;
+        border-radius: 5rem;
+    }
+    .menucategory ul li {
+        margin-bottom: 0.8rem;
+    }
+}
 
 /* menu background */
 #parabgmenu {
@@ -187,7 +232,19 @@ a:hover {
     padding: 0 9rem;
     text-shadow: 1px 1px 3px #2a7c6f;
 }
-
+@media (max-width: 800px) {
+    #parabgmenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #parabgmenu p {
+        font-size: 2.6rem;
+        margin: 0;
+        padding: 1rem;
+    }
+}
 
 /* about us */
 #aboutus {
@@ -222,6 +279,20 @@ a:hover {
     margin: 1rem;
     max-width: 400px;
 }
+@media (max-width: 800px) {
+    #aboutus {
+        padding: 1rem;
+        text-align: center;
+    }
+    #address {
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+}
 
 /* FAQ */
 #faq {
@@ -230,114 +301,17 @@ a:hover {
     background-color: #4ac2af;
     color: #ffffff;
 }
-#faq h2, #faq h3 {
+#faq h2 {
     color: #ffffff;
 }
-.question {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 1.2rem;
-    background-color: #4ac2af;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 1.2rem;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.3s;
+@media (max-width: 800px) {
+    #faq {
+        margin: 0;
+        padding: 1rem;
+        background-color: #4ac2af;
+        color: #ffffff;
+    }    
 }
-.question:hover,
-.question:active {
-    background-color: #edece5;
-    color: #181818;
-}
-.question:after {
-    content: '\002B';
-    color: #181818;
-    font-weight: bold;
-    float: right;
-    margin-left: 0.5rem;
-}
-.answer {
-    padding: 0 1.2rem;
-    text-align: left;
-    background-color: #edece5;
-    color: #181818;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-.answer.open {
-    height: auto;
-}
-
-/* contact */
-#contact {
-    margin: 0;
-    padding: 2rem 8rem 4rem;
-    background-color: #edece5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-}
-#contact input, 
-#contact textarea {
-    font-family: 'Montserrat Alternates', sans-serif;
-    display: block;
-    margin-bottom: 0.6rem;
-    border: 0;
-    border-bottom: 1px solid #181818;
-}
-#contact input {
-    width: 630px;
-    min-height: 30px;
-}
-#contact textarea {
-    margin: 0.4rem auto 1.4rem auto;
-    padding: 0.2rem;
-    width: 630px;
-}
-#submit {
-    background-color: #2a7c6f;
-    color: #ffffff;
-    font-size: large;
-    font-weight: bold;
-    padding: 0.8rem 1.6rem;
-    border: 0;
-}
-#submit:hover {
-    background-color: #4ac2af;
-}
-#contact span {
-    display: block;
-    text-align: right;
-    font-size: 0.9rem;
-}
-
-/* footer */
-#footer {
-    margin: 2rem auto;
-    padding: 1rem auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#sociallinks {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2rem;
-}
-.sociallink {
-    font-size: 2rem;
-}
-.sociallink a:hover {
-    color: #4ac2af;
-}
-
 
 /* accordion FAQ */
 .accordion {
@@ -378,6 +352,7 @@ a:hover {
     height: 0.4rem;
     transition: all 0.3s;
     font-weight: normal;
+    z-index: 88;
 }
 .accordion__title::after {
     transform: rotate(90deg);
@@ -400,4 +375,169 @@ a:hover {
 .accordion__item.is-active .accordion__title::after {
     transform: rotate(180deg);
     opacity: 0;
+}
+
+/* contact */
+#contact {
+    margin: 0;
+    padding: 2rem 8rem 4rem;
+    background-color: #edece5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+#contact input, 
+#contact textarea {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: block;
+    margin-bottom: 0.6rem;
+    border: 0;
+    border-bottom: 1px solid #181818;
+}
+#contact input {
+    width: 630px;
+    min-height: 2rem;
+}
+#contact textarea {
+    margin: 0.4rem auto 1.4rem auto;
+    padding: 0.2rem;
+    width: 630px;
+}
+#submit {
+    background-color: #2a7c6f;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
+    padding: 0.8rem 1.6rem;
+    border: 0;
+}
+#submit:hover {
+    background-color: #4ac2af;
+}
+#contact span {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+}
+@media (max-width: 800px) {
+    #contact {
+        margin: 0;
+        padding: 2rem;
+        background-color: #edece5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+    #contact input {
+        width: 100%;
+        min-height: 2rem;
+    }
+    #contact textarea {
+        margin: 0.4rem auto 1.4rem auto;
+        padding: 0.2rem;
+        width: 100%;
+    }
+}
+
+/* footer */
+#footer {
+    margin: 2rem auto;
+    padding: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sociallinks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.sociallink {
+    font-size: 2rem;
+}
+.sociallink a:hover {
+    color: #4ac2af;
+}
+@media (max-width: 800px) {
+    #footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+
+/* back to top button */
+#scrollBack {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 98;
+    border: none;
+    outline: none;
+    background-color: #bbbbbb;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    border-radius: 2rem;
+}  
+#scrollBack:hover {
+    background-color: #4ac2af;
+    color: #ffffff;
+}
+
+/* hamburger menu */
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #181818;
+}
+@media (max-width: 800px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 8.2rem;
+        flex-direction: column;
+        background-color: #ffffffef;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        text-align: center;
+        box-shadow: 0 0 6px #4ac2af;
+    }
+    .nav-menu {
+        padding-bottom: 1.7rem;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }

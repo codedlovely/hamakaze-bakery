@@ -13,7 +13,7 @@
 <body>
     <div id="header">
         <div id="logo"><a href="./index.html">HAMAKAZE BAKERY</a></div>
-        <ul id="navimenu">
+        <ul id="navimenu" class="nav-menu">
             <li class="navilink"><a href="./index.html">HOME</a></li>
             <li class="navilink"><a href="#topsellers">TOP SELLERS</a></li>
             <li class="navilink"><a href="#menu">MENU</a></li>
@@ -21,6 +21,11 @@
             <li class="navilink"><a href="#faq">FAQ</a></li>
             <li class="navilink"><a href="#contact">CONTACT</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </div>
 
     <div id="container">
@@ -176,7 +181,7 @@
                 Please feel free to contact us for any questions, request for your order
                 or inquiry for the ingredients of our baked goods.
             </p>
-            <form action="demoaction.php">
+            <form action="#">
                 <p><span>All input fields are required.</span></p>
                 <label for="yourname">Your name</label>
                 <input type="text" name="yourname" id="yourname" placeholder="Your name" required>
@@ -198,11 +203,18 @@
             &copy; 2022 Hamakaze Bakery
         </div>
         <ul id="sociallinks">
-            <li class="sociallink"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-            <li class="sociallink"><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
-            <li class="sociallink"><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
+            <li class="sociallink"><a href="#" title="Instagram">
+                <i class="fa-brands fa-instagram"></i></a></li>
+            <li class="sociallink"><a href="#" title="Facebook">
+                <i class="fa-brands fa-facebook-square"></i></a></li>
+            <li class="sociallink"><a href="#" title="Twitter">
+                <i class="fa-brands fa-twitter-square"></i></a></li>
         </ul>
     </div>
     
+    <button onclick="topFunction()" id="scrollBack" title="Scroll back to top">
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
+
 </body>
 </html>
