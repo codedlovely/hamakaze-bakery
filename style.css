@@ -297,6 +297,10 @@ a:hover {
         align-items: center;
         gap: 0.6rem;
     }
+    .map {
+        margin: 1rem 0;
+        max-width: 380px;
+    }
 }
 
 /* FAQ */
