@@ -10,9 +10,6 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 20px;
 }
-* {
-    border: 1px solid red;
-}
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
@@ -31,6 +28,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    flex: 1 1 auto;
     gap: 0.5rem;
 }
 #logo {
@@ -56,17 +54,51 @@ a:hover {
 #navimenu a:hover {
     text-decoration: none;
 }
-#hamburger {
+.hamburger {
     display: none;
 }
 .bar {
     display: block;
-    width: 33px;
+    width: 28px;
     height: 2px;
-    margin: 4px auto;
+    margin: 6px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #505050;
+}
+@media (max-width: 400px) {
+    #header {
+        padding: 1.2rem 0.8rem;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 7.4rem;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        background-color: #ffffffef;
+        width: 100%;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .navilink {
+        padding: 1rem;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 #topsellers,
@@ -76,6 +108,16 @@ a:hover {
 #contact
 {
     padding: 2rem 8rem 4rem;
+}
+@media (max-width: 400px) {
+    #topsellers,
+    #menu,
+    #shop,
+    #faq,
+    #contact
+    {
+        padding: 2rem 1rem 4rem;
+    }
 }
 #topsellers h3,
 #menu h3,
@@ -115,7 +157,18 @@ a:hover {
     margin: 1rem 0;
     text-shadow: 1px 1px 6px #181818;
 }
-
+@media (max-width: 400px) {
+    #hero {
+        min-height: 26rem;
+    }
+    #hero h2 {
+        font-size: 2.8rem;
+        padding: 4rem 1rem 1rem;
+    }
+    #hero p {
+        font-size: 2rem;
+    }
+}
 
 /* top sellers */
 #topsellerlist {
@@ -134,6 +187,11 @@ a:hover {
     margin-top: 0;
     font-size: 1rem;
 }
+@media (max-width: 400px) {
+    .topseller {
+        max-width: 100%;
+    }
+}
 
 /* menu */
 #menu {
@@ -143,11 +201,13 @@ a:hover {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 #menulist h4 span {
     font-weight: 300;
 }
 .menucategory {
+    padding-bottom: 1.4rem;
     width: 30%;
     border-radius: 5rem 5rem 0 0;
     background-color: #ffffff;
@@ -171,6 +231,14 @@ a:hover {
     margin-top: 0.8rem;
     font-size: 1rem;
 }
+@media (max-width: 400px) {
+    #menulist {
+        gap: 2rem;
+    }
+    .menucategory {
+        width: 90%;
+    }
+}
 
 /* background below menu */
 #parabgmenu {
@@ -187,6 +255,11 @@ a:hover {
     color: #ffffff;
     text-shadow: -2px -2px 4px #505050;
 }
+@media (max-width: 400px) {
+    #parabgmenu {
+        padding: 4rem 1rem;
+    }
+}
 
 /* shop */
 #shop {
@@ -194,16 +267,18 @@ a:hover {
 }
 .shopinfo {
     margin: auto;
-    outline: 1px solid #505050;
+    text-align: left;
 }
 .shopinfo th {
     font-weight: 300;
+    text-align: center;
 }
 #addressinfo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 #addressinfo p {
     margin-top: 0;
@@ -215,6 +290,14 @@ a:hover {
 }
 #address h4 {
     color: #181818;
+}
+@media (max-width: 400px) {
+    #addressinfo p {
+        max-width: 300px;
+    }
+    #addressinfo img {
+        max-width: 100%;
+    }
 }
 
 /* faq */
@@ -290,6 +373,12 @@ dt {
     transform: rotate(180deg);
     opacity: 0;
 }
+@media (max-width: 400px) {
+    .accordion {
+        text-align: left;
+        margin: auto 0.8rem;
+    }    
+}
 
 /* contact */
 #contact {
@@ -335,6 +424,21 @@ dt {
 #submit:hover {
     background-color: #4ac2af;
 }
+@media (max-width: 400px) {
+    #contact p {
+        margin: auto 0.8rem 2rem 0.8rem;
+        text-align: left;
+    }
+    #contact input {
+        width: 80%;
+        min-height: 2rem;
+    }
+    #contact textarea {
+        margin: 0.4rem auto 1.4rem auto;
+        padding: 0.2rem;
+        width: 80%;
+    }
+}
 
 /* footer */
 #footer {
@@ -358,6 +462,13 @@ dt {
 }
 #footer ul li a:hover {
     color: #4ac2af;
+}
+@media (max-width: 400px) {
+    #footer {
+        padding: 2rem 0.8rem;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
 }
 
 /* back to top button */
