@@ -283,8 +283,12 @@ a:hover {
         text-align: center;
     }
     .openinghours {
-        margin: 0.2rem 0;
-    }   
+        margin: 0.2rem ato;
+    }
+    .openinghours td {
+        text-align: left;
+        padding: 0.4rem;
+    }
     #address {
         margin: 2rem auto;
         display: flex;
