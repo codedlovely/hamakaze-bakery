@@ -16,6 +16,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    color: #2a7c6f;
 }
 
 #header {
@@ -37,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     display: flex;
     gap: 2rem;
+    text-transform: uppercase;
 }
 #hamburger {
     display: none;
@@ -158,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 #addressinfo p {
+    margin-top: 0;
     max-width: 200px;
     text-align: left;
 }
@@ -168,6 +171,9 @@ h1, h2, h3, h4, h5, h6 {
 /* faq */
 #faq {
     background-color: #2a7c6f;
+    color: #f5f5ee;
+}
+#faq h3 {
     color: #f5f5ee;
 }
 .accordion {
