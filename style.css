@@ -71,7 +71,7 @@ a:hover {
     #navimenu {
         justify-content: left;
         align-items: center;
-        gap: 1.6rem;
+        gap: 1.3rem;
     }
 }
 
@@ -513,15 +513,17 @@ a:hover {
         left: -100%;
         top: 8.2rem;
         flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
         background-color: #ffffffef;
         width: 100%;
         box-shadow: 0 0 6px #4ac2af;
     }
-    .nav-menu {
-        padding-bottom: 1.7rem;
-    }
     .nav-menu.active {
         left: 0;
+    }
+    .navilink {
+        padding: 1rem;
     }
     .hamburger {
         display: block;
