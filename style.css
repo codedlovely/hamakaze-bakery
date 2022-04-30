@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     color: #2a7c6f;
+    font-weight: 300;
+}
+a,
+a:hover {
+    color: #2a7c6f;
 }
 
 #header {
@@ -28,9 +33,15 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: nowrap;
     gap: 0.5rem;
 }
-#header h1 {
+#logo {
+    font-size: 1.4rem;
+    font-weight: bold;
     margin-bottom: 1rem;
-    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+#logo a, #logo a:hover {
+    color: #181818;
+    text-decoration: none;
 }
 #navimenu {
     list-style: none;
@@ -39,6 +50,11 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 2rem;
     text-transform: uppercase;
+    font-size: 1rem;
+}
+#navimenu a,
+#navimenu a:hover {
+    text-decoration: none;
 }
 #hamburger {
     display: none;
@@ -53,7 +69,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #505050;
 }
 
-#hero,
 #topsellers,
 #menu,
 #shop,
@@ -77,19 +92,47 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.2rem auto;
 }
 
+/* hero */
+#hero {
+    background-image: url('./assets/images/1.pexels-tran-564883.jpg');
+    min-height: 30rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero h2 {
+    color: #ffffff;
+    font-size: 4.6rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 8rem 3rem 1rem;
+    text-shadow: 3px 3px #2a7c6f;
+}
+#hero p {
+    color: #ffffff;
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 6px #181818;
+}
+
+
 /* top sellers */
 #topsellerlist {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 0;
     flex-wrap: wrap;
 }
 .topseller {
-    max-width: 30%;
+    max-width: 32%;
 }
 .topseller img {
     width: 100%;
+}
+.topseller p {
+    margin-top: 0;
+    font-size: 1rem;
 }
 
 /* menu */
@@ -153,6 +196,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
     outline: 1px solid #505050;
 }
+.shopinfo th {
+    font-weight: 300;
+}
 #addressinfo {
     display: flex;
     justify-content: center;
@@ -167,10 +213,13 @@ h1, h2, h3, h4, h5, h6 {
 #addressinfo img {
     max-width: 380px;
 }
+#address h4 {
+    color: #181818;
+}
 
 /* faq */
 #faq {
-    background-color: #2a7c6f;
+    background-color: #4ac2af;
     color: #f5f5ee;
 }
 #faq h3 {
@@ -178,6 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .accordion {
     text-align: left;
+    margin: auto 6rem;
 }
 dt {
     margin: 0.8rem auto;
@@ -211,7 +261,7 @@ dt {
     top: 0;
     bottom: 0;
     margin: auto 0;
-    background-color: #4ac2af;
+    background-color: #2a7c6f;
     width: 1.4rem;
     height: 0.4rem;
     transition: all 0.3s;
