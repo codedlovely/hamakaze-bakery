@@ -66,7 +66,7 @@ a:hover {
     transition: all 0.3s ease-in-out;
     background-color: #505050;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #header {
         padding: 1.2rem 0.8rem;
     }
@@ -109,7 +109,7 @@ a:hover {
 {
     padding: 2rem 8rem 4rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #topsellers,
     #menu,
     #shop,
@@ -119,6 +119,17 @@ a:hover {
         padding: 2rem 1rem 4rem;
     }
 }
+@media (min-width:421px) and ( max-width:900px) {
+    #topsellers,
+    #menu,
+    #shop,
+    #faq,
+    #contact
+    {
+        padding: 2rem 1rem 4rem;
+    }
+}
+
 #topsellers h3,
 #menu h3,
 #shop h3,
@@ -157,13 +168,27 @@ a:hover {
     margin: 1rem 0;
     text-shadow: 0 0 10px #181818;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #hero {
         min-height: 26rem;
     }
     #hero h2 {
         font-size: 2.8rem;
         padding: 4rem 1rem 1rem;
+    }
+    #hero p {
+        font-size: 2rem;
+    }
+}
+@media (min-width:421px) and ( max-width:900px) {
+    #hero {
+        min-height: 30rem;
+    }
+    #hero h2 {
+        font-size: 4.6rem;
+        margin: auto;
+        padding: 3rem 3rem 1rem;
+        text-shadow: 3px 3px #2a7c6f;
     }
     #hero p {
         font-size: 2rem;
@@ -187,7 +212,7 @@ a:hover {
     margin-top: 0;
     font-size: 1rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .topseller {
         max-width: 100%;
     }
@@ -231,12 +256,17 @@ a:hover {
     margin-top: 0.8rem;
     font-size: 1rem;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #menulist {
         gap: 2rem;
     }
     .menucategory {
         width: 90%;
+    }
+}
+@media (min-width:421px) and ( max-width:900px) {
+    #menulist h4 span {
+        display: block;
     }
 }
 
@@ -255,7 +285,7 @@ a:hover {
     color: #ffffff;
     text-shadow: 0 0 14px #505050;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #parabgmenu {
         padding: 4rem 1rem;
     }
@@ -291,7 +321,7 @@ a:hover {
 #address h4 {
     color: #181818;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #addressinfo p {
         max-width: 300px;
     }
@@ -373,7 +403,7 @@ dt {
     transform: rotate(180deg);
     opacity: 0;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .accordion {
         text-align: left;
         margin: auto 0.8rem;
@@ -424,9 +454,24 @@ dt {
 #submit:hover {
     background-color: #4ac2af;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #contact p {
         margin: auto 0.8rem 2rem 0.8rem;
+        text-align: left;
+    }
+    #contact input {
+        width: 80%;
+        min-height: 2rem;
+    }
+    #contact textarea {
+        margin: 0.4rem auto 1.4rem auto;
+        padding: 0.2rem;
+        width: 80%;
+    }
+}
+@media (min-width:421px) and ( max-width:900px) {
+    #contact p {
+        margin: auto 1rem 2rem 1rem;
         text-align: left;
     }
     #contact input {
@@ -463,11 +508,16 @@ dt {
 #footer ul li a:hover {
     color: #4ac2af;
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     #footer {
         padding: 2rem 0.8rem;
         flex-direction: column;
         gap: 1.4rem;
+    }
+}
+@media (min-width:421px) and ( max-width:900px) {
+    #footer {
+        padding: 2rem;
     }
 }
 
