@@ -1,0 +1,44 @@
+
+:root {
+    --scroll-padding: 122px;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding);
+}
+body {
+    margin: 0;
+    padding: var(--scroll-padding) 0 0 0;
+}
+
+
+.navbar {
+    background-color: pink;
+}
+.hNav {
+    flex-direction: column;
+}
+@media (max-width: 991px) {
+    .hNav {
+        flex-direction: row;
+    }
+    #navbarCollapse {
+        text-align: right;
+    }
+}
+
+#hero, #signup {
+    background-color: aquamarine;
+}
+
+#menu {
+    background-color: deepskyblue;
+}
+
+#shop {
+    background-color: darkseagreen;
+}
+
+#contact {
+    background-color: violet;
+}
