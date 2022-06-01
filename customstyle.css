@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,700;1,300;1,700&display=swap');
 
 :root {
-    --scroll-padding: 122px;
+    --scroll-padding: 105px;
+    --scroll-padding-m: 60px;
+    --main-color: #555555;
+    --main-color-cont: #f0f0f0;
+    --acc-color-dark: #567456;
+    --acc-color-dark-rgb: 86, 116, 86;
+    --acc-color-light: darkseagreen;
+    --acc-color-light-rgb: 143, 188, 143;
+    --acc-color-cont: #e5f5ec;
+    --acc-color-cont-rgb: 229, 245, 236;
 }
 html {
     scroll-behavior: smooth;
@@ -9,36 +19,187 @@ html {
 body {
     margin: 0;
     padding: var(--scroll-padding) 0 0 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.2rem;
+}
+@media (max-width: 991px) {
+    html {
+        scroll-padding-top: var(--scroll-padding-m);
+    }
+    body {
+        padding-top: var(--scroll-padding-m);
+    }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
+}
+h1, h2 {
+    text-transform: uppercase;
+}
 
+/* navigation */
 .navbar {
-    background-color: pink;
+    background-color: var(--main-color-cont);
 }
-.hNav {
+.navContainer {
     flex-direction: column;
 }
 @media (max-width: 991px) {
-    .hNav {
+    .navContainer {
         flex-direction: row;
+        align-items: center;
     }
     #navbarCollapse {
         text-align: right;
     }
 }
-
-#hero, #signup {
-    background-color: aquamarine;
+h1 {
+    font-size: 1.4rem;
 }
 
+/* hero */
+#hero {
+    background: url(./assets/images/1.pexels-tran-564883.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-weight: 900;
+    color: var(--main-color-cont);
+    text-shadow: 0.2rem 0.2rem 0.6rem var(--acc-color-dark);
+    min-height: calc(100vh - var(--scroll-padding));
+}
+#hero .greet {
+    font-size: 4vw;
+}
+#hero .sub {
+    font-size: 3.5vw;
+    font-weight: 300;
+    text-shadow: 0 0 0.7rem var(--main-color);
+}
+@media (max-width: 991px) {
+    #hero {
+        min-height: calc(100vh - var(--scroll-padding-m));
+    }
+}
+@media (max-width: 575px) {
+    #hero .greet {
+        font-size: 10vw;
+    }
+    #hero .sub {
+        font-size: 8vw;
+    }
+}
+
+/* menu */
 #menu {
-    background-color: deepskyblue;
+    background-color: var(--acc-color-light);
+}
+#menu h5 {
+    background-color: var(--acc-color-cont);
+    margin-bottom: 0;
+    padding-top: 2rem;
+    border-radius: 3rem 3rem 0 0;
+}
+#menu h5, #menu ul {
+    box-shadow: 0.5rem 0.5rem var(--acc-color-dark);
+}
+#menu li {
+    background-color: var(--acc-color-cont);
+}
+@media (max-width: 991px) {
+    #menu ul {
+        margin-bottom: 2rem;
+    }
+}
+#menu span {
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 0;
 }
 
+/* signup */
+#signup {
+    background: linear-gradient(180deg, 
+                rgba(var(--acc-color-light-rgb), 1) 10%,  
+                rgba(var(--acc-color-light-rgb), 0) 50%, 
+                rgba(var(--acc-color-light-rgb), 1) 90%), 
+                url(./assets/images/3.pexels-silvia-trigo-1857157.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-weight: 900;
+    color: var(--main-color-cont);
+    text-shadow: 0 0 0.6rem var(--main-color);
+    min-height: calc(100vh - var(--scroll-padding));
+}
+@media (max-width: 991px) {
+    #signup {
+        min-height: calc(100vh - var(--scroll-padding-m));
+    }
+}
+#signup button {
+    background-color: var(--acc-color-dark);
+    color: var(--main-color-cont);
+}
+
+/* shop */
 #shop {
-    background-color: darkseagreen;
+    background-color: var(--acc-color-light);
 }
 
+/* faq */
+#faq {
+    background-color: var(--acc-color-dark);
+    color: var(--main-color-cont);
+}
+#faq * {
+    border: none;
+    border-radius: 0;
+    background-color: var(--acc-color-dark);
+    color: var(--main-color-cont);
+}
+.card-body p {
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+.accordion-button::before {
+    content: "Q:";
+    margin-right: 0.4rem;
+}
+.accordion-button:after {
+    display: none;
+}
+.card-body p::before {
+    content: "A:";
+    margin-right: 0.4rem;
+}
+
+/* contact */
 #contact {
-    background-color: violet;
+    background-color: var(--main-color-cont);
+}
+#contact .btn-primary {
+    background-color: var(--acc-color-light);
+}
+#contact input,
+#contact textarea {
+    border-radius: 0;
+}
+
+/* footer */
+footer {
+    background-color: var(--acc-color-dark);
+    color: var(--main-color-cont);
+}
+footer .list-group-item {
+    background-color: var(--acc-color-dark);
+    color: var(--main-color-cont);
+    font-size: 2.2rem;
+}
+footer .list-group-item:hover {
+    text-shadow: 0 0 0.2rem var(--acc-color-cont);
 }
