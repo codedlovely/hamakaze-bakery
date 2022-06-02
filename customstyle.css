@@ -203,3 +203,9 @@ footer .list-group-item {
 footer .list-group-item:hover {
     text-shadow: 0 0 0.2rem var(--acc-color-cont);
 }
+
+*:focus, *:active {
+    outline:0px !important;
+    box-shadow: none !important;
+    -webkit-appearance:none;
+}
