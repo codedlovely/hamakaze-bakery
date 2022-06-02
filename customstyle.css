@@ -162,16 +162,32 @@ h1 {
     background-color: var(--acc-color-dark);
     color: var(--main-color-cont);
 }
-.card-body p {
-    padding-left: 1rem;
-    font-size: 1rem;
-}
 .accordion-button::before {
     content: "Q:";
     margin-right: 0.4rem;
 }
-.accordion-button:after {
-    display: none;
+.accordion-button.collapsed::after {
+    background-image: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    color: var(--main-color-cont);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    color: var(--main-color-cont);
+    margin-right: 5px;
+}
+.card-body *{
+    background-color: var(--main-color-cont) !important;
+    color: var(--main-color) !important;
+}
+.card-body p {
+    padding-left: 1rem;
+    font-size: 1rem;
 }
 .card-body p::before {
     content: "A:";
